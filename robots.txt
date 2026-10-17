@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tiagassem.github.io/heatwave-brain-risk-simulator/sitemap.xml

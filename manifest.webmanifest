@@ -1,0 +1,19 @@
+{
+  "id": "./",
+  "name": "Heatwave & Cold-Wave Brain Risk Simulator",
+  "short_name": "BrainRisk",
+  "description": "Free simulator of heat waves, cold waves, ozone, PM2.5 and climate 2050 effects on the blood-brain barrier and microglia.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0F172A",
+  "theme_color": "#0F172A",
+  "lang": "en",
+  "categories": ["health", "education", "science"],
+  "icons": [
+    {"src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}

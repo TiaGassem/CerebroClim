@@ -1,21 +1,23 @@
-MIT License
+Copyright (c) 2026 Tasnim (TiaGassem). All rights reserved.
 
-Copyright (c) 2026 TiaGassem
+PROPRIETARY SOURCE-AVAILABLE LICENSE (Academic and Non-Commercial Use)
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Permission is granted, free of charge, to view the source code and to run the
+software for personal, educational and non-commercial academic research
+purposes, provided that:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+1. This copyright notice and license are retained in all copies.
+2. Any publication, thesis, report or presentation using results from this
+   software cites it (see CITATION.cff).
+3. You do not sell, sublicense, host as a competing public service, or
+   otherwise use the software or its derivatives for commercial purposes, and
+   you do not redistribute modified versions, without prior written permission
+   from the copyright holder.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+All other rights are reserved. Commercial, clinical-deployment or institutional
+licensing requests: contact the repository owner via GitHub (TiaGassem).
+
+DISCLAIMER: THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND. IT
+IS A RESEARCH AND EDUCATIONAL TOOL, NOT A MEDICAL DEVICE, AND MUST NOT BE USED
+FOR DIAGNOSIS OR TREATMENT DECISIONS. THE AUTHOR IS NOT LIABLE FOR ANY CLAIM OR
+DAMAGES ARISING FROM ITS USE.
