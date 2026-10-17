@@ -1,11 +1,13 @@
-# 🧠 Heatwave & Cold-Wave Brain Risk Simulator
+# 🧠 CerebroClim
+
+**Heatwave & Cold-Wave Brain Risk Simulator**
 
 Free, open-access simulator of how **heat waves, cold waves, ozone, PM2.5 pollution and climate change 2050** affect the **blood-brain barrier** and **M1 microglial neuroinflammation**. Android, iPhone and PC. EN / FR / AR.
 
 | Choose how to use it | Link |
 |---|---|
-| 🌐 **Web app (full screen)** | https://heatwave-brain-risk-simulator.streamlit.app/ |
-| 📲 **Installable app + QR code (website)** | https://tiagassem.github.io/heatwave-brain-risk-simulator/ |
+| 🌐 **Web app (full screen)** | https://cerebroclim.streamlit.app/ |
+| 📲 **Installable app + QR code (website)** | https://tiagassem.github.io/cerebroclim/ |
 
 **Keywords:** heatwave brain risk, heat wave health, cold wave health, blood-brain barrier, neuroinflammation, microglia M1, ozone, PM2.5, climate change 2050, heat stroke prevention, ERA5, Open-Meteo, computational neuroscience.
 

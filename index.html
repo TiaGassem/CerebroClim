@@ -5,29 +5,33 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Heatwave Brain Risk Simulator: Heat, Cold, Ozone & Climate 2050</title>
 <meta name="description" content="Free simulator of how heat waves, cold waves, ozone, PM2.5 pollution and climate change 2050 affect the blood-brain barrier and microglial neuroinflammation. Works on Android, iPhone and PC. EN/FR/AR.">
-<meta name="keywords" content="heatwave brain risk, heat wave health, cold wave health, blood-brain barrier, neuroinflammation, microglia M1, ozone health effects, PM2.5, climate change 2050 health, heat stroke prevention, climate and brain health, ERA5, Open-Meteo">
+<meta name="keywords" content="CerebroClim, heatwave brain risk, heat wave health, cold wave health, blood-brain barrier, neuroinflammation, microglia M1, ozone health effects, PM2.5, climate change 2050 health, heat stroke prevention, climate and brain health, ERA5, Open-Meteo">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; frame-src https://*.streamlit.app; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' https://formspree.io">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="author" content="Tasnim (TiaGassem)">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <!-- GOOGLE SEARCH CONSOLE: paste your verification tag on the next line (remove the comment markers) -->
+<!-- BING: <meta name="msvalidate.01" content="TOKEN"> -->
 <!-- <meta name="google-site-verification" content="PASTE_YOUR_TOKEN_HERE"> -->
-<link rel="canonical" href="https://tiagassem.github.io/heatwave-brain-risk-simulator/">
+<link rel="canonical" href="https://tiagassem.github.io/cerebroclim/">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" type="image/png" href="icons/favicon-48.png">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <meta name="theme-color" content="#0F172A">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="BrainRisk">
+<meta name="apple-mobile-web-app-title" content="CerebroClim">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Heatwave & Cold-Wave Brain Risk Simulator">
+<meta property="og:title" content="CerebroClim: Heatwave & Cold-Wave Brain Risk Simulator">
 <meta property="og:description" content="Free tool: how heat, cold, ozone, PM2.5 and climate 2050 affect the blood-brain barrier and microglia. Android, iPhone, PC.">
-<meta property="og:url" content="https://tiagassem.github.io/heatwave-brain-risk-simulator/">
-<meta property="og:image" content="https://tiagassem.github.io/heatwave-brain-risk-simulator/og-image.png">
+<meta property="og:url" content="https://tiagassem.github.io/cerebroclim/">
+<meta property="og:image" content="https://tiagassem.github.io/cerebroclim/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://tiagassem.github.io/heatwave-brain-risk-simulator/og-image.png">
+<meta name="twitter:image" content="https://tiagassem.github.io/cerebroclim/og-image.png">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-{"@type":"WebApplication","name":"Heatwave & Cold-Wave Brain Risk Simulator","url":"https://tiagassem.github.io/heatwave-brain-risk-simulator/","description":"Free simulator of heat waves, cold waves, ozone, PM2.5 and climate change 2050 effects on blood-brain barrier leakage and M1 microglial neuroinflammation.","applicationCategory":"EducationalApplication","operatingSystem":"Android, iOS, Windows, macOS, Linux (web)","browserRequirements":"Requires JavaScript","inLanguage":["en","fr","ar"],"isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Person","name":"Tasnim (TiaGassem)","url":"https://github.com/TiaGassem"},"image":"https://tiagassem.github.io/heatwave-brain-risk-simulator/og-image.png","keywords":"heatwave, cold wave, blood-brain barrier, neuroinflammation, ozone, PM2.5, climate change 2050"},
+{"@type":"WebSite","name":"CerebroClim","alternateName":["Cerebro Clim","CerebroClim brain risk simulator"],"url":"https://tiagassem.github.io/cerebroclim/","inLanguage":["en","fr","ar"]},
+{"@type":"WebApplication","name":"CerebroClim","alternateName":"Heatwave & Cold-Wave Brain Risk Simulator","sameAs":["https://github.com/TiaGassem/cerebroclim"],"url":"https://tiagassem.github.io/cerebroclim/","description":"Free simulator of heat waves, cold waves, ozone, PM2.5 and climate change 2050 effects on blood-brain barrier leakage and M1 microglial neuroinflammation.","applicationCategory":"EducationalApplication","operatingSystem":"Android, iOS, Windows, macOS, Linux (web)","browserRequirements":"Requires JavaScript","inLanguage":["en","fr","ar"],"isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Person","name":"Tasnim (TiaGassem)","url":"https://github.com/TiaGassem"},"image":"https://tiagassem.github.io/cerebroclim/og-image.png","keywords":"heatwave, cold wave, blood-brain barrier, neuroinflammation, ozone, PM2.5, climate change 2050"},
 {"@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"Is the simulator free?","acceptedAnswer":{"@type":"Answer","text":"Yes. It is free to use online, with no account."}},
 {"@type":"Question","name":"Does it give a medical diagnosis?","acceptedAnswer":{"@type":"Answer","text":"No. It is a research and educational model that estimates relative risk; it is not a medical device or medical advice."}},
@@ -51,21 +55,23 @@ details{background:var(--card);border:1px solid var(--bd);border-radius:8px;padd
 footer{border-top:1px solid var(--bd);padding:20px 0;color:var(--mut);font-size:.9rem}ul{padding-left:20px}
 body.standalone header,body.standalone .hero,body.standalone .note,body.standalone section:not(#app),body.standalone footer{display:none}
 body.standalone .wrap{padding:0;max-width:none}body.standalone .frame{border:0;border-radius:0}body.standalone iframe{height:100dvh;min-height:0}body.standalone #app{padding:0}
+.skip{position:absolute;left:-999px;top:0;background:var(--fg);color:var(--bg);padding:8px 12px;z-index:9}.skip:focus{left:8px}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--acc);outline-offset:2px}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}html{scroll-behavior:smooth}
 </style>
 </head>
 <body>
-<header><div class="wrap"><span class="brand">🧠 BrainRisk Simulator</span>
-<nav><a href="#app">App</a><a href="#install">Install</a><a href="#faq">FAQ</a><a href="#cite">Cite</a><a href="privacy.html">Privacy</a></nav></div></header>
+<a class="skip" href="#app">Skip to the app</a>
+<header><div class="wrap"><span class="brand"><img src="icons/logo.svg" alt="" width="28" height="28" style="vertical-align:middle;margin-right:8px">CerebroClim</span>
+<nav><a href="#app">App</a><a href="#install">Install</a><a href="#faq">FAQ</a><a href="#cite">Cite</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a></nav></div></header>
 <main class="wrap">
 <section class="hero">
-<h1>Heatwave &amp; Cold-Wave Brain Risk Simulator</h1>
+<h1><img src="icons/logo.svg" alt="" width="56" height="56" style="vertical-align:middle;margin-right:10px">CerebroClim<br><span style="font-size:.55em;font-weight:600;color:var(--mut)">Heatwave &amp; Cold-Wave Brain Risk Simulator</span></h1>
 <p class="lead">A free, open-access tool showing how <b>heat waves, cold waves, ozone and PM2.5 pollution and climate change 2050</b> affect the <b>blood-brain barrier</b> and <b>M1 microglial neuroinflammation</b> - with a 48-hour prevention window, two-region comparison, alerts and a PDF report. For everyone: older adults, families, clinicians, researchers, schools and workplaces.</p>
-<div class="btns"><a class="btn" href="https://heatwave-brain-risk-simulator.streamlit.app/" target="_blank" rel="noopener">🌐 Option 1 - Open the web app</a><button class="btn" id="installBtn" type="button">📲 Option 2 - Install as an app</button><a class="btn alt" href="#app">Use it inside this page ↓</a></div>
+<div class="btns"><a class="btn" href="https://cerebroclim.streamlit.app/" target="_blank" rel="noopener">🌐 Option 1 - Open the web app</a><button class="btn" id="installBtn" type="button">📲 Option 2 - Install as an app</button><a class="btn alt" href="#app">Use it inside this page ↓</a></div>
 </section>
 <section id="app">
-<div class="frame"><iframe id="appframe" data-src="https://heatwave-brain-risk-simulator.streamlit.app/?embed=true" title="Heatwave and Cold-Wave Brain Risk Simulator" allow="geolocation; clipboard-write; fullscreen; notifications" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-<p class="note">First load can take ~30 s if the app was asleep (press the “get this app back up” button if shown). Not loading? <a href="https://heatwave-brain-risk-simulator.streamlit.app/" target="_blank" rel="noopener">Open it in a new tab</a>.</p>
-<noscript><p><a href="https://heatwave-brain-risk-simulator.streamlit.app/">Open the simulator</a> (JavaScript required).</p></noscript>
+<div class="frame"><iframe id="appframe" data-src="https://cerebroclim.streamlit.app/?embed=true" title="Heatwave and Cold-Wave Brain Risk Simulator" allow="geolocation; clipboard-write; fullscreen; notifications" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+<p class="note">First load can take ~30 s if the app was asleep (press the “get this app back up” button if shown). Not loading? <a href="https://cerebroclim.streamlit.app/" target="_blank" rel="noopener">Open it in a new tab</a>.</p>
+<noscript><p><a href="https://cerebroclim.streamlit.app/">Open the simulator</a> (JavaScript required).</p></noscript>
 </section>
 <section>
 <h2>What you can do</h2>
@@ -117,11 +123,11 @@ body.standalone .wrap{padding:0;max-width:none}body.standalone .frame{border:0;b
 </section>
 <section id="cite">
 <h2>How to cite</h2>
-<p>Tasnim (TiaGassem) (2026). <i>Heatwave &amp; Cold-Wave Brain Risk Simulator</i> [Web application]. https://tiagassem.github.io/heatwave-brain-risk-simulator/</p>
+<p>Tasnim (TiaGassem) (2026). <i>Heatwave &amp; Cold-Wave Brain Risk Simulator</i> [Web application]. https://tiagassem.github.io/cerebroclim/</p>
 </section>
 </main>
 <footer><div class="wrap"><p>© 2026 Tasnim (TiaGassem). All rights reserved. The online tool is free for personal, educational and non-commercial research use; the source code is proprietary and may not be copied, redistributed or used commercially without written permission.</p>
-<p>Research and educational tool - not a medical device, not a diagnosis, not a substitute for professional medical advice. <a href="privacy.html">Privacy</a></p></div></footer>
+<p>Research and educational tool - not a medical device, not a diagnosis, not a substitute for professional medical advice. <a href="privacy.html">Privacy</a> · <a href="contact.html">Contact</a> · <a href="/.well-known/security.txt">Security</a></p></div></footer>
 <script>
 if ('serviceWorker' in navigator) { addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {})); }
 const standalone = matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;

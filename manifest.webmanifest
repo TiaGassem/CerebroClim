@@ -1,7 +1,7 @@
 {
   "id": "./",
-  "name": "Heatwave & Cold-Wave Brain Risk Simulator",
-  "short_name": "BrainRisk",
+  "name": "CerebroClim: Heatwave & Cold-Wave Brain Risk Simulator",
+  "short_name": "CerebroClim",
   "description": "Free simulator of heat waves, cold waves, ozone, PM2.5 and climate 2050 effects on the blood-brain barrier and microglia.",
   "start_url": "./",
   "scope": "./",

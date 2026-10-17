@@ -1,5 +1,5 @@
 """
-Heat-Stress & Cold-Wave Neuroinflammation Simulator Platform
+CerebroClim: Heatwave & Cold-Wave Brain Risk Simulator
 MSc Neuroscience Research Platform | Final Unified Master Edition
 
 Author: Tasnim (TiaGassem) | Computational Neuroscience Research Project
@@ -202,7 +202,7 @@ EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
 # ---------------------------------------------------------------------------
 # CLINICAL STYLING & LAYOUT CONFIGURATION
 # ---------------------------------------------------------------------------
-st.set_page_config(page_title="Heat & Cold-Wave Neuroinflammation Simulator | Neuro-Protection", page_icon="🧠", layout="wide")
+st.set_page_config(page_title="CerebroClim | Heatwave & Cold-Wave Brain Risk Simulator", page_icon="🧠", layout="wide")
 sns.set_theme(style="whitegrid")
 
 st.markdown(
