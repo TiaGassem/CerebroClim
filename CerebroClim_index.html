@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>CerebroClim - Heatwave & Cold-Wave Brain Risk Simulator (Free, EN/FR/AR)</title>
+<meta name="description" content="Free simulator of how heat waves, cold waves, ozone, PM2.5 pollution and climate change 2050 affect the blood-brain barrier and microglial neuroinflammation. Works on Android, iPhone and PC. EN/FR/AR.">
+<meta name="keywords" content="CerebroClim, heatwave brain risk, heat wave health, cold wave health, blood-brain barrier, neuroinflammation, microglia M1, ozone health effects, PM2.5, climate change 2050 health, heat stroke prevention, climate and brain health, ERA5, Open-Meteo">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; frame-src https://*.streamlit.app https://*.streamlit.io; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' https://formspree.io">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="author" content="Tasnim (TiaGassem)">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<!-- GOOGLE SEARCH CONSOLE: paste your verification tag on the next line (remove the comment markers) -->
+<!-- BING: <meta name="msvalidate.01" content="TOKEN"> -->
+<!-- <meta name="google-site-verification" content="PASTE_YOUR_TOKEN_HERE"> -->
+<link rel="canonical" href="https://tiagassem.github.io/CerebroClim/">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icons/favicon-48.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="theme-color" content="#0F172A">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="CerebroClim">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CerebroClim: Heatwave & Cold-Wave Brain Risk Simulator">
+<meta property="og:description" content="Free tool: how heat, cold, ozone, PM2.5 and climate 2050 affect the blood-brain barrier and microglia. Android, iPhone, PC.">
+<meta property="og:url" content="https://tiagassem.github.io/CerebroClim/">
+<meta property="og:image" content="https://tiagassem.github.io/CerebroClim/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://tiagassem.github.io/CerebroClim/og-image.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"WebSite","name":"CerebroClim","alternateName":["Cerebro Clim","CerebroClim brain risk simulator"],"url":"https://tiagassem.github.io/CerebroClim/","inLanguage":["en","fr","ar"]},
+{"@type":"WebApplication","name":"CerebroClim","alternateName":"Heatwave & Cold-Wave Brain Risk Simulator","sameAs":["https://github.com/TiaGassem/CerebroClim"],"url":"https://tiagassem.github.io/CerebroClim/","description":"Free simulator of heat waves, cold waves, ozone, PM2.5 and climate change 2050 effects on blood-brain barrier leakage and M1 microglial neuroinflammation.","applicationCategory":"EducationalApplication","operatingSystem":"Android, iOS, Windows, macOS, Linux (web)","browserRequirements":"Requires JavaScript","inLanguage":["en","fr","ar"],"isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Person","name":"Tasnim (TiaGassem)","url":"https://github.com/TiaGassem"},"image":"https://tiagassem.github.io/CerebroClim/og-image.png","keywords":"heatwave, cold wave, blood-brain barrier, neuroinflammation, ozone, PM2.5, climate change 2050"},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Is the simulator free?","acceptedAnswer":{"@type":"Answer","text":"Yes. It is free to use online, with no account."}},
+{"@type":"Question","name":"Does it give a medical diagnosis?","acceptedAnswer":{"@type":"Answer","text":"No. It is a research and educational model that estimates relative risk; it is not a medical device or medical advice."}},
+{"@type":"Question","name":"Which data does it use?","acceptedAnswer":{"@type":"Answer","text":"Copernicus ERA5 reanalysis, Open-Meteo weather forecasts and Open-Meteo air-quality data (ozone and PM2.5)."}}]}]}
+</script>
+<style>
+:root{--bg:#f8fafc;--fg:#0f172a;--mut:#475569;--card:#fff;--bd:#e2e8f0;--acc:#0b6fa4}
+@media(prefers-color-scheme:dark){:root{--bg:#0b1220;--fg:#e5e7eb;--mut:#94a3b8;--card:#111a2e;--bd:#1f2a44;--acc:#60a5fa}}
+*{box-sizing:border-box}body{margin:0;font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--fg)}
+a{color:var(--acc)}.wrap{max-width:1000px;margin:0 auto;padding:0 16px}
+header{border-bottom:1px solid var(--bd);background:var(--card)}header .wrap{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:10px 16px}
+.brand{font-weight:700}nav a{margin-right:14px;text-decoration:none;font-size:.95rem}
+section{padding:20px 0}.hero{padding:30px 0 8px}h1{font-size:clamp(1.6rem,5vw,2.4rem);line-height:1.2;margin:.2em 0}h2{font-size:1.4rem;margin:0 0 10px}
+.lead{color:var(--mut);font-size:1.05rem;max-width:780px}.btns{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}
+.btn{display:inline-block;padding:12px 18px;border-radius:8px;border:1px solid var(--fg);background:var(--fg);color:var(--bg);text-decoration:none;font-weight:600;cursor:pointer;font-size:1rem;font-family:inherit}
+.btn.alt{background:transparent;color:var(--fg)}
+.frame{border:1px solid var(--bd);border-radius:10px;overflow:hidden;background:var(--card)}iframe{width:100%;height:82vh;min-height:560px;border:0;display:block}
+.note{color:var(--mut);font-size:.9rem;margin:8px 0}.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:14px}.qr{max-width:170px;width:100%;border-radius:8px;background:#fff;padding:6px}
+details{background:var(--card);border:1px solid var(--bd);border-radius:8px;padding:10px 14px;margin:8px 0}summary{cursor:pointer;font-weight:600}
+footer{border-top:1px solid var(--bd);padding:20px 0;color:var(--mut);font-size:.9rem}ul{padding-left:20px}
+body.standalone header,body.standalone .hero,body.standalone .note,body.standalone section:not(#app),body.standalone footer{display:none}
+body.standalone .wrap{padding:0;max-width:none}body.standalone .frame{border:0;border-radius:0}body.standalone iframe{height:100dvh;min-height:0}body.standalone #app{padding:0}
+.skip{position:absolute;left:-999px;top:0;background:var(--fg);color:var(--bg);padding:8px 12px;z-index:9}.skip:focus{left:8px}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--acc);outline-offset:2px}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}html{scroll-behavior:smooth}
+</style>
+</head>
+<body>
+<a class="skip" href="#app">Skip to the app</a>
+<header><div class="wrap"><span class="brand"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9InciIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNGQjkyM0MiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNFRjQ0NDQiLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCBpZD0iYyIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzM4QkRGOCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzI1NjNFQiIvPjwvbGluZWFyR3JhZGllbnQ+PGNsaXBQYXRoIGlkPSJrIj48Y2lyY2xlIGN4PSIyNTYiIGN5PSIyNTYiIHI9IjE3MCIvPjwvY2xpcFBhdGg+PC9kZWZzPjxyZWN0IHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiByeD0iMTEzIiBmaWxsPSIjMEYxNzJBIi8+PGcgY2xpcC1wYXRoPSJ1cmwoI2spIj48cmVjdCB4PSI4NiIgeT0iODYiIHdpZHRoPSIxNzAiIGhlaWdodD0iMzQwIiBmaWxsPSJ1cmwoI3cpIi8+PHJlY3QgeD0iMjU2IiB5PSI4NiIgd2lkdGg9IjE3MCIgaGVpZ2h0PSIzNDAiIGZpbGw9InVybCgjYykiLz48L2c+PGcgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjYiIGZpbGw9IiNmZmYiPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0xMjYgMjcwIEwxNzkgMTkwIEwzMDQgMjEzIEwzODggMzAyIEwyNzEgMzM4IEwyMTQgMzMyIFogTTE3OSAxOTAgTDIxNCAzMzIgTTMwNCAyMTMgTDI3MSAzMzggTTE3OSAxOTAgTDM4OCAzMDIiLz48Y2lyY2xlIGN4PSIxMjYiIGN5PSIyNzAiIHI9IjE0Ii8+PGNpcmNsZSBjeD0iMTc5IiBjeT0iMTkwIiByPSIxNCIvPjxjaXJjbGUgY3g9IjMwNCIgY3k9IjIxMyIgcj0iMTQiLz48Y2lyY2xlIGN4PSIzODgiIGN5PSIzMDIiIHI9IjE0Ii8+PGNpcmNsZSBjeD0iMjcxIiBjeT0iMzM4IiByPSIxNCIvPjxjaXJjbGUgY3g9IjIxNCIgY3k9IjMzMiIgcj0iMTQiLz48L2c+PC9zdmc+" alt="" width="28" height="28" style="vertical-align:middle;margin-right:8px">CerebroClim</span>
+<nav><a href="#app">App</a><a href="#install">Install</a><a href="#faq">FAQ</a><a href="#cite">Cite</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a></nav></div></header>
+<main class="wrap">
+<section class="hero">
+<h1><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9InciIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNGQjkyM0MiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNFRjQ0NDQiLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCBpZD0iYyIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzM4QkRGOCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzI1NjNFQiIvPjwvbGluZWFyR3JhZGllbnQ+PGNsaXBQYXRoIGlkPSJrIj48Y2lyY2xlIGN4PSIyNTYiIGN5PSIyNTYiIHI9IjE3MCIvPjwvY2xpcFBhdGg+PC9kZWZzPjxyZWN0IHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiByeD0iMTEzIiBmaWxsPSIjMEYxNzJBIi8+PGcgY2xpcC1wYXRoPSJ1cmwoI2spIj48cmVjdCB4PSI4NiIgeT0iODYiIHdpZHRoPSIxNzAiIGhlaWdodD0iMzQwIiBmaWxsPSJ1cmwoI3cpIi8+PHJlY3QgeD0iMjU2IiB5PSI4NiIgd2lkdGg9IjE3MCIgaGVpZ2h0PSIzNDAiIGZpbGw9InVybCgjYykiLz48L2c+PGcgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjYiIGZpbGw9IiNmZmYiPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0xMjYgMjcwIEwxNzkgMTkwIEwzMDQgMjEzIEwzODggMzAyIEwyNzEgMzM4IEwyMTQgMzMyIFogTTE3OSAxOTAgTDIxNCAzMzIgTTMwNCAyMTMgTDI3MSAzMzggTTE3OSAxOTAgTDM4OCAzMDIiLz48Y2lyY2xlIGN4PSIxMjYiIGN5PSIyNzAiIHI9IjE0Ii8+PGNpcmNsZSBjeD0iMTc5IiBjeT0iMTkwIiByPSIxNCIvPjxjaXJjbGUgY3g9IjMwNCIgY3k9IjIxMyIgcj0iMTQiLz48Y2lyY2xlIGN4PSIzODgiIGN5PSIzMDIiIHI9IjE0Ii8+PGNpcmNsZSBjeD0iMjcxIiBjeT0iMzM4IiByPSIxNCIvPjxjaXJjbGUgY3g9IjIxNCIgY3k9IjMzMiIgcj0iMTQiLz48L2c+PC9zdmc+" alt="" width="56" height="56" style="vertical-align:middle;margin-right:10px">CerebroClim<br><span style="font-size:.55em;font-weight:600;color:var(--mut)">Heatwave &amp; Cold-Wave Brain Risk Simulator</span></h1>
+<p class="lead">A free, open-access tool showing how <b>heat waves, cold waves, ozone and PM2.5 pollution and climate change 2050</b> affect the <b>blood-brain barrier</b> and <b>M1 microglial neuroinflammation</b> - with a 48-hour prevention window, two-region comparison, alerts and a PDF report. For everyone: older adults, families, clinicians, researchers, schools and workplaces.</p>
+<div class="btns"><a class="btn" href="https://cerebroclim.streamlit.app/" target="_blank" rel="noopener">🌐 Option 1 - Open the web app</a><button class="btn" id="installBtn" type="button">📲 Option 2 - Install as an app</button><a class="btn alt" href="#app">Use it inside this page ↓</a></div>
+</section>
+<section id="app">
+<div class="frame"><div id="ph" style="padding:36px 16px;text-align:center"><p style="margin:0 0 14px">Open the simulator here, or full screen for the best experience.</p><button class="btn" id="loadBtn" type="button">▶ Load the simulator here</button> <a class="btn alt" href="https://cerebroclim.streamlit.app/" target="_blank" rel="noopener">Open full screen ↗</a></div><iframe id="appframe" style="display:none" data-src="https://cerebroclim.streamlit.app/?embed=true" title="Heatwave and Cold-Wave Brain Risk Simulator" allow="geolocation; clipboard-write; fullscreen; notifications" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+<p class="note">First load can take ~30 s if the app was asleep (press the “get this app back up” button if shown). Not loading? <a href="https://cerebroclim.streamlit.app/" target="_blank" rel="noopener">Open it in a new tab</a>.</p>
+<noscript><p><a href="https://cerebroclim.streamlit.app/">Open the simulator</a> (JavaScript required).</p></noscript>
+</section>
+<section>
+<h2>What you can do</h2>
+<div class="grid">
+<div class="card"><b>Past · Present · Future</b><br>Copernicus ERA5 archive, 7-day Open-Meteo forecast and a 2050 climate scenario, computed together.</div>
+<div class="card"><b>Search or pin any place</b><br>Interactive map, single region or side-by-side comparison of two cities or countries.</div>
+<div class="card"><b>Prevention in time</b><br>48-hour pre-cooling / re-warming window and protocols for seniors, hypertension and metabolic risk.</div>
+<div class="card"><b>Pollution included</b><br>Ground-level ozone and PM2.5 raise the modelled risk; the 2050 engine adds slower barrier repair.</div>
+<div class="card"><b>Alerts &amp; reports</b><br>Early-warning e-mail, browser notifications, WhatsApp text and a clinical-style PDF with references.</div>
+<div class="card"><b>Learn &amp; share</b><br>Lessons on heatwave causes, the ozone layer vs ground-level ozone, and the #HeatSafe48 awareness toolkit.</div>
+</div>
+</section>
+<section id="install">
+<h2>Install it like an app (free, no store)</h2>
+<div class="grid">
+<div class="card"><b>Android (Chrome)</b><ol><li>Open this page in Chrome.</li><li>Tap the ⋮ menu.</li><li>Tap <b>Install app</b> (or <b>Add to Home screen</b>).</li></ol></div>
+<div class="card"><b>iPhone / iPad (Safari)</b><ol><li>Open this page in Safari.</li><li>Tap <b>Share</b> (square with arrow).</li><li>Tap <b>Add to Home Screen</b>, then <b>Add</b>.</li></ol></div>
+<div class="card"><b>PC / Mac (Chrome or Edge)</b><ol><li>Open this page.</li><li>Click the install icon ⊕ in the address bar, or menu → <b>Install</b>.</li><li>Launch it from your desktop or Start menu.</li></ol></div>
+<div class="card"><b>Scan to open</b><br><img class="qr" src="qr-code.png" alt="QR code linking to the Heatwave Brain Risk Simulator" width="170" height="170"><br><a href="qr-code.png" download>Download QR code</a></div>
+</div>
+</section>
+<section>
+<h2>Who is it for?</h2>
+<ul><li><b>General public &amp; families:</b> understand your risk and act 48 hours before the peak.</li><li><b>Older adults &amp; caregivers:</b> simple prevention steps and check-in ideas.</li><li><b>Clinicians &amp; public health:</b> briefing PDF and early-warning e-mail (research tool, not a diagnostic device).</li><li><b>Researchers &amp; students:</b> transparent ODE model, assumptions and sources.</li><li><b>Workplaces &amp; industry:</b> heat-stress planning and awareness material.</li></ul>
+</section>
+<section id="faq">
+<h2>FAQ</h2>
+<details><summary>Is it free?</summary><p>Yes, free to use online, no account needed.</p></details>
+<details><summary>Does it diagnose or give medical advice?</summary><p>No. It is a phenomenological research and education model that estimates <i>relative</i> risk. Parameters are illustrative and not fitted to patient data. In an emergency (confusion, fainting, very high body temperature) call your local emergency number.</p></details>
+<details><summary>Where does the data come from?</summary><p>Copernicus ERA5 reanalysis, Open-Meteo weather forecasts and Open-Meteo air-quality data (ozone and PM2.5).</p></details>
+<details><summary>Does it work on my phone?</summary><p>Yes: Android, iPhone, tablets and PCs, in English, French and Arabic. Use the install steps above.</p></details>
+</section>
+<section lang="fr">
+<h2>En français</h2>
+<p>Simulateur <b>gratuit</b> du risque cérébral lors des vagues de chaleur et de froid : barrière hémato-encéphalique, microglie M1, ozone, PM2.5 et climat 2050. Prévention à 48 h, comparaison de deux régions, alertes et rapport PDF. Installable sur Android, iPhone et PC.</p>
+<p lang="ar" dir="rtl">محاكي <b>مجاني</b> لمخاطر موجات الحر والبرد على الدماغ: الحاجز الدموي الدماغي، الخلايا الدبقية، الأوزون، الجسيمات الدقيقة، ومناخ 2050.</p>
+</section>
+<section>
+<h2>Science &amp; sources</h2>
+<ul>
+<li>Kiyatkin EA (2010). Brain temperature homeostasis: physiological fluctuations and pathological shifts. <i>Front Biosci</i> 15:73-92.</li>
+<li>Sharma HS, Johanson CE (1998). Heat stress and blood-brain barrier permeability under physiological variations.</li>
+<li>Montagne A, et al. (2015). Blood-brain barrier breakdown in the aging human hippocampus. <i>Neuron</i> 85(2):296-302.</li>
+<li>Perry VH, Holmes C (2014). Microglial priming in neurodegenerative disease. <i>Nat Rev Neurol</i> 10(4):217-224.</li>
+<li>WHO (2021). Global air quality guidelines. Geneva: World Health Organization.</li>
+<li>Hersbach H, et al. (2020). The ERA5 global reanalysis. <i>Q J R Meteorol Soc</i> 146:1999-2049.</li>
+</ul>
+<p class="note">The full bibliography is inside the app (Sources tab). Please verify bibliographic details before formal citation.</p>
+</section>
+<section id="cite">
+<h2>How to cite</h2>
+<p>Tasnim (TiaGassem) (2026). <i>Heatwave &amp; Cold-Wave Brain Risk Simulator</i> [Web application]. https://tiagassem.github.io/CerebroClim/</p>
+</section>
+</main>
+<footer><div class="wrap"><p>© 2026 Tasnim (TiaGassem). All rights reserved. The online tool is free for personal, educational and non-commercial research use; the source code is proprietary and may not be copied, redistributed or used commercially without written permission.</p>
+<p>Research and educational tool - not a medical device, not a diagnosis, not a substitute for professional medical advice. <a href="privacy.html">Privacy</a> · <a href="contact.html">Contact</a> · <a href="/.well-known/security.txt">Security</a></p></div></footer>
+<script>
+const APP_URL='https://cerebroclim.streamlit.app/'; /* change ONLY this line if your Streamlit address is different */
+document.querySelectorAll('a[href^="https://cerebroclim.streamlit.app"]').forEach(a=>a.href=APP_URL);
+document.getElementById('appframe').dataset.src=APP_URL+'?embed=true';
+if ('serviceWorker' in navigator) { addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {})); }
+const standalone = matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+if (standalone) document.body.classList.add('standalone');
+const f = document.getElementById('appframe'), ph = document.getElementById('ph');
+const load = () => { if (!f.src) f.src = f.dataset.src; f.style.display = 'block'; if (ph) ph.style.display = 'none'; };
+document.getElementById('loadBtn').addEventListener('click', load);
+document.querySelectorAll('a[href="#app"].btn').forEach(a => a.addEventListener('click', load));
+if (standalone) load();
+let dp = null;
+addEventListener('beforeinstallprompt', e => { e.preventDefault(); dp = e; });
+document.getElementById('installBtn').addEventListener('click', async () => {
+  if (dp) { dp.prompt(); await dp.userChoice; dp = null; } else { location.hash = '#install'; }
+});
+</script>
+</body>
+</html>
