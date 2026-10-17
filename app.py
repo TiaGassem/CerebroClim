@@ -21,6 +21,7 @@ Features & Architecture
 """
 from __future__ import annotations
 
+import os
 import base64
 import html as html_lib
 import io
@@ -1268,7 +1269,13 @@ def _secret(key):
     try:
         return st.secrets[key]
     except Exception:
-        return None
+        pass
+    # Fallback for hosts that use environment variables (Hugging Face Spaces, Render, Docker...)
+    if key == "smtp":
+        h = os.environ.get("SMTP_HOST")
+        return {"host": h, "port": os.environ.get("SMTP_PORT", "587"), "username": os.environ.get("SMTP_USERNAME"),
+                "password": os.environ.get("SMTP_PASSWORD"), "sender": os.environ.get("SMTP_SENDER")} if h else None
+    return os.environ.get(key.upper()) or None
 
 
 def send_alert_email(to_addr: str, subject: str, text_body: str, html_body: str, pdf_bytes=None):
