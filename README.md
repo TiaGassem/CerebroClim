@@ -6,7 +6,7 @@ Free, open-access simulator of how **heat waves, cold waves, ozone, PM2.5 pollut
 
 | Choose how to use it | Link |
 |---|---|
-| 🌐 **Web app (full screen)** | https://cerebroclim.streamlit.app/ |
+| 🌐 **Web app (full screen)** | https://cerebroclim-u65ecpiiwmvagqr2lythjv.streamlit.app/  |
 | 📲 **Installable app + QR code (website)** | https://tiagassem.github.io/cerebroclim/ |
 
 **Keywords:** heatwave brain risk, heat wave health, cold wave health, blood-brain barrier, neuroinflammation, microglia M1, ozone, PM2.5, climate change 2050, heat stroke prevention, ERA5, Open-Meteo, computational neuroscience.
