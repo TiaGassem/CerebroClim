@@ -4,8 +4,8 @@ title: "CerebroClim: Heatwave & Cold-Wave Brain Risk Simulator"
 type: software
 authors:
   - alias: "Tasnim (TiaGassem)"
-repository-code: "https://github.com/TiaGassem/cerebroclim"
-url: "https://cerebroclim.streamlit.app/"
+repository-code: "https://github.com/TiaGassem/CerebroClim"
+url: "https://cerebroclim-u65ecpiiwmvagqr2lythjv.streamlit.app/"
 license: LicenseRef-Proprietary
 date-released: 2026-10-15
 keywords: [neuroinflammation, blood-brain barrier, microglia, heat stress, cold wave, climate change, ozone, PM2.5, ERA5, Open-Meteo]
