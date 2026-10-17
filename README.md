@@ -1,14 +1,28 @@
----
-title: CerebroClim
-emoji: 🧠
-colorFrom: orange
-colorTo: blue
-sdk: docker
-app_port: 7860
-pinned: false
-license: other
-short_description: Free heatwave and cold-wave brain risk simulator (EN/FR/AR)
----
-# CerebroClim
-Heatwave & cold-wave brain risk simulator: blood-brain barrier, microglia, ozone, PM2.5, climate 2050.
-Research and educational tool, not medical advice. (c) 2026 Tasnim (TiaGassem). See LICENSE.
+# 🧠 CerebroClim
+
+**Heatwave & Cold-Wave Brain Risk Simulator**
+
+Free, open-access simulator of how **heat waves, cold waves, ozone, PM2.5 pollution and climate change 2050** affect the **blood-brain barrier** and **M1 microglial neuroinflammation**. Android, iPhone and PC. EN / FR / AR.
+
+| Choose how to use it | Link |
+|---|---|
+| 🌐 **Web app (full screen)** | https://cerebroclim.streamlit.app/ |
+| 📲 **Installable app + QR code (website)** | https://tiagassem.github.io/cerebroclim/ |
+
+**Keywords:** heatwave brain risk, heat wave health, cold wave health, blood-brain barrier, neuroinflammation, microglia M1, ozone, PM2.5, climate change 2050, heat stroke prevention, ERA5, Open-Meteo, computational neuroscience.
+
+## Features
+Past · Present · Future comparison (ERA5, 7-day forecast, 2050) · interactive map and two-region comparison · ODE model with shear, cohorts, ozone/PM2.5 and vascular frailty · 48-hour prevention protocols · alerts (e-mail, push, WhatsApp) · PDF report · lessons, awareness toolkit, guide assistant, sources.
+
+## Run locally
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
+E-mail alerts: copy `.streamlit/secrets.toml.example` into Streamlit Secrets.
+
+## Disclaimer
+Research and educational tool. Phenomenological model, not fitted to patient data. Not a medical device, diagnosis or medical advice.
+
+## License & citation
+© 2026 Tasnim (TiaGassem). All rights reserved; see `LICENSE` (free personal/educational/non-commercial research use with attribution; no copying, redistribution or commercial use without written permission) and `CITATION.cff`.
