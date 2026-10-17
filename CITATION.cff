@@ -4,7 +4,7 @@ title: "CerebroClim: Heatwave & Cold-Wave Brain Risk Simulator"
 type: software
 authors:
   - alias: "Tasnim (TiaGassem)"
-repository-code: "https://github.com/TiaGassem/cerebroclim"
+repository-code: "https://github.com/TiaGassem/CerebroClim"
 url: "https://cerebroclim.streamlit.app/"
 license: LicenseRef-Proprietary
 date-released: 2026-10-15
