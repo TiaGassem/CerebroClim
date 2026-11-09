@@ -21,6 +21,7 @@ Features & Architecture
 """
 from __future__ import annotations
 
+import os
 import base64
 import html as html_lib
 import io
@@ -1268,7 +1269,13 @@ def _secret(key):
     try:
         return st.secrets[key]
     except Exception:
-        return None
+        pass
+    # Fallback for hosts that use environment variables (Hugging Face Spaces, Render, Docker...)
+    if key == "smtp":
+        h = os.environ.get("SMTP_HOST")
+        return {"host": h, "port": os.environ.get("SMTP_PORT", "587"), "username": os.environ.get("SMTP_USERNAME"),
+                "password": os.environ.get("SMTP_PASSWORD"), "sender": os.environ.get("SMTP_SENDER")} if h else None
+    return os.environ.get(key.upper()) or None
 
 
 def send_alert_email(to_addr: str, subject: str, text_body: str, html_body: str, pdf_bytes=None):
@@ -1632,6 +1639,21 @@ with tab_sim:
             if st.button(f"Send the alert to {owner} now"):
                 status2, msg2 = send_alert_email(owner, subj, body_txt, body_html, pdf_bytes if attach_pdf else None)
                 (st.success if status2 == "sent" else st.error)(msg2)
+        # Works for EVERY user with no server setup: open in their own mail app, or download a ready .eml file
+        st.caption("No server e-mail configured, or it failed? These two options always work:")
+        _to = (user_email or "").strip()
+        _mailto = f"mailto:{quote(_to)}?subject={quote(subj)}&body={quote(body_txt[:1400])}"
+        _c1, _c2 = st.columns(2)
+        with _c1:
+            st.link_button("Open in my e-mail app", _mailto, width="stretch")
+        with _c2:
+            _eml = EmailMessage()
+            _eml["Subject"], _eml["To"] = subj, _to or "recipient@example.com"
+            _eml.set_content(body_txt)
+            _eml.add_alternative(body_html, subtype="html")
+            if attach_pdf and pdf_bytes:
+                _eml.add_attachment(pdf_bytes, maintype="application", subtype="pdf", filename="cerebroclim_report.pdf")
+            st.download_button("Download as .eml file", data=bytes(_eml), file_name="cerebroclim_alert.eml", mime="message/rfc822", width="stretch")
         share = share_text(data)
         st.text_area("Shareable alert text (SMS / WhatsApp / social)", share, height=100)
         st.link_button("Share on WhatsApp", "https://wa.me/?text=" + quote(share))
